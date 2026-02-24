@@ -1,0 +1,1016 @@
+ *{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+  
+}
+
+body{
+     margin: 0;
+    padding: 0; 
+    background :black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+      'Helvetica Neue', sans-serif;
+    color: #e7e7e7;
+    /* overflow-x:hidden; */
+    
+}
+
+.first {
+    height: 45px;
+    width: 100%;
+    z-index: 1000;
+    align-items: center;
+    display: flex;
+    padding: 1rem 6%; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    background: black;
+    border-bottom: 1px solid green;
+     transition:0.4s;
+    
+} 
+
+.first.hide{
+    transform:translateY(-100%);
+}
+
+.logo{
+    font-weight:bolder;
+    font-size: larger;
+    color: white;
+}
+.h1{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+.h1 li{
+    list-style: none;
+    margin: 1rem;
+}
+.h1 a.active{
+    color:#7CFF7C;
+
+}
+.h1 a:hover{
+    color: rgb(96, 223, 96);
+}
+.h1 a{color: white;
+text-decoration: none;
+position: relative;
+}
+
+.h1 a::after{
+  content:'';
+  width:0%;
+  height:2px;
+  background:#7CFF7C;
+  /* position:absolute; */
+  left:0;
+  bottom:-6px;
+  transition:0.3s;
+}
+
+.h1 a:hover::after{
+  width:100%;
+}
+
+.hamburger{
+    display: none;
+    flex-direction: column;
+    gap: 5.5px;
+    cursor: pointer;
+
+}
+.hamburger span{
+    width: 28px;
+    height: 3px;
+    background: white;
+    transition: 0.4s;
+}
+
+.full{
+    display: flex;
+    max-height: 100vh;
+    max-width: 100%;
+    background: black;
+    
+   
+}
+
+    /* GRADIENT AND LAYER BLUR */
+
+.tag-box{
+    position: absolute;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, #656565, rgb(39, 199, 39), green, rgb(1, 65, 1), #757575, #656565);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    box-shadow: 0 0 15px rgb(66, 65, 65);
+    margin-top: 10rem;
+    margin-left: 7rem;
+    
+    
+}
+@keyframes animationGradient{
+    to{background-position: 200%;}
+}
+.tag-box .tag{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+    color: white;
+    
+}
+
+
+
+
+.image{
+    width: 300px;
+    height: 400px;
+    margin-left: 15rem;
+    margin-top: 9rem;
+    border-radius: 50rem;
+    object-fit: cover;
+    border: 2px solid rgb(102, 216, 102) ;
+    box-shadow: 0 0 50px  rgb(1, 160, 1);
+    animation: float 3s ease-in-out infinite;
+    filter: grayscale(0.2) contrast(1.1);
+     animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-20px);}
+}
+
+.image-mine{
+    width: 100%;
+    text-align: center;
+    /* position: relative; */
+
+}
+
+
+
+.p1{
+    margin-left: 2rem; 
+   /* position: absolute; */
+   background: linear-gradient(to right, green, white);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    margin-top: 3rem;
+ 
+}
+
+.p2{
+      color: white;
+     /* position: absolute; */
+       margin-left: 8rem;
+       margin-top: 21.5rem;
+       /* display: table-column; */
+}
+
+.box{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+
+}
+.box h2{
+    align-items: center;
+    margin-left: 32rem;
+    margin-top: 5rem;
+    font-size: 40px;
+    background: linear-gradient(to right, green, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+}
+
+.card{
+    height: 45vh;
+    width: 20%;
+    background-color: rgb(207, 196, 196);
+    margin-left: 6rem;
+    margin-top: 3rem;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.box h3{
+    color: white;
+    margin-left:25rem;
+    margin-top: 3rem;
+    position: absolute;
+    
+}
+.p3{
+    color: white;
+    margin-left: 25rem;
+    margin-top: 5rem;
+    position: absolute;
+}
+
+.box button{
+    margin-left: 25rem;
+    margin-top: 10rem;
+    position: absolute;
+    padding: 3px;
+}
+
+.card2{
+    background-color: white;
+    position: absolute;
+    margin-left: 62rem;
+    margin-top: 24rem;
+    width:20% ;
+    height: 45vh;
+    border-radius: 10px;
+}
+.card2 img{
+    width: 100%;
+    height: 45vh;
+    border-radius: 10px;
+}
+
+.p4{
+    color: white;
+    margin-left: 28rem;
+    margin-top: 26rem;
+    position: absolute;
+}
+
+.box h4{
+    color: white;
+    margin-left: 28rem;
+    margin-top: 24rem;
+    position: absolute;
+    font-size: 18px;
+}
+
+.on button{
+     margin-left: 28rem;
+    margin-top: 32.5rem;
+    position: absolute;
+    padding: 3px;
+}
+
+.box2{
+    background-color: black;
+    width: 100%;
+    height: 120vh;
+} 
+
+
+.section3{
+    width: 100%;
+}
+.card3{
+    width: 20%;
+    height: 45vh;
+    background-color: white;
+    margin-left:6rem ;
+    position: absolute;
+    border-radius: 10px;
+    margin-top: 8rem;
+}
+
+.box2 img{
+    width: 100%;
+    height: 45vh;
+    border-radius: 10px;
+}
+.box2 h5{
+    color: white;
+    position: absolute;
+    font-size: 18px;
+    margin-left: 25rem;
+    margin-top: 8rem;
+}
+.p5{
+    color: white;
+    position: absolute;
+    margin-top: 10rem;
+    margin-left:25rem ;
+
+}
+.onn button{
+    margin-left: 25rem;
+    margin-top: 19rem;
+    position: absolute;
+    padding: 3px;
+}
+
+.card4{
+    width: 20%;
+    height: 45vh;
+    background-color: white;
+    margin-left:62rem ;
+    position: absolute;
+    margin-top: 29rem;
+    border-radius: 10px;
+}
+
+.box2 h6{
+    color: white;
+    margin-left: 28rem;
+    margin-top: 29rem;
+    position: absolute;
+    font-size: 18px;
+}
+.but button{
+    margin-left: 28rem;
+    margin-top: 38.5rem;
+    position: absolute;
+    padding: 3px;
+}
+.card4 img{
+     width: 100%;
+    height: 45vh;
+    border-radius: 10px;
+}
+
+.p6{
+    color: white;
+    margin-left: 28rem;
+    margin-top: 31rem;
+    position: absolute;
+}
+
+
+.box3{
+    width: 100%;
+    height: 105vh;
+    background-color: black;
+}
+.p7{
+    color: white;
+    margin-top: 10rem;
+    position: absolute;
+    padding: 1.5rem;
+}
+.p8{
+    color: white;
+    position: absolute;
+    margin-top: 20rem;
+    padding: 1.5rem;
+    font-size: x-large;
+
+}
+.co{
+     background: linear-gradient(to right, green, white);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     position: absolute;
+     margin-top: 5rem;
+     font-size: 50px;
+     padding: 20px;
+}
+
+   
+.box3 h2{
+    background: linear-gradient(to right, green, white);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+    position: absolute;
+    margin-left: 32rem;
+    font-size: 40px;
+    
+    
+}
+.st1{
+    width: 20%;
+    height: 30vh;
+    background-color: aliceblue;
+    margin-top: 27rem;
+    margin-left: 7rem;
+    position: absolute;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow:5px 5px 10px green;
+    background-color: black;
+    border: 1px solid green;
+    color: white;
+    transition: transform 0.3s ease;
+}
+.st1:hover{
+    transform: translateY(-50px);/*slight bottom*/
+}
+.st2{
+     width: 20%;
+    height: 30vh;
+    margin-top: 27rem;
+    margin-left: 32rem;
+    position: absolute;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow:5px 5px 10px green;
+    background-color: black;
+    border: 1px solid green;
+    color: white;
+    transition: transform 0.3s ease;
+}
+.st2:hover{
+    transform: translateY(-50px);/*slight bottom*/
+}
+
+.st3{
+     width: 20%;
+    height: 30vh;
+    margin-top: 27rem;
+    margin-left: 57rem;
+    position: absolute;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow:5px 5px 10px green;
+    background-color: black;
+    border: 1px solid green;
+    color: white;
+    transition: transform 0.3s ease;
+}
+.st3:hover{
+    transform: translateY(-50px);/*slight top*/
+}
+
+.p13{
+    
+    position: absolute;
+    margin-top: 5rem;
+    padding: 1rem;
+    font-size: 35px;
+    background: linear-gradient(to right, green, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pro{
+    
+    position: absolute;
+    margin-left: 20rem;
+    box-shadow: 5px 4px 8px green;
+    width: 20%;
+    height: 43vh;
+    border: 1px solid green;
+    border-radius: 10px;
+    margin-top: 11rem;
+
+}
+.box4 label{
+    color: white;
+   
+    position: absolute;
+    margin-top: 4.5rem;
+    margin-left: 2rem;
+   
+    
+}
+.p12{
+    color: white;
+    font-size: 30px;
+    padding: 1rem;
+    background: linear-gradient(to right, green, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    margin-left: 2rem;
+}
+.box4 input{
+    padding:4px;
+    border: 2px solid green;
+    border-radius: 7px;
+    margin-left: 1.5rem;
+    position: absolute;
+    margin-top: 4.5rem;
+    width: 75%;
+    background-color: black;
+    color: white;
+
+}
+.pro button{
+    position: absolute;
+    margin-top: 7.5rem;
+    padding: 5px;
+    margin-left: 1.5rem;
+    width: 75%;
+    border: 2px solid green;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+}
+.insta{
+  font-size:30px;
+  animation:pulse 1.5s infinite;
+  padding-left: 5rem;
+}
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.2);}
+  100%{transform:scale(1);}
+}
+.what{
+  font-size:35px;
+  color:#1a773c;
+  animation:pulse 1.5s infinite;
+  margin-left: 6rem;
+}
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.2);}
+  100%{transform:scale(1);}
+}
+.email{
+  font-size:30px;
+  color:#356ba5;
+  animation:pulse 1.5s infinite;
+  
+}
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.2);}
+  100%{transform:scale(1);}
+}
+
+.box4{
+    width: 100%;
+    height: 80vh;
+    background-color:black;
+}
+iframe{
+    position: absolute;
+    margin-left: 53rem;
+    width: 20%;
+    height: 35vh;
+    margin-top: 14rem;
+    border: 2px solid rgb(1, 78, 1);
+    border-radius: 7px;
+   
+}
+.p14{
+    position: absolute;
+    margin-left: 54rem;
+    margin-top: 11rem;
+    font-size: 24px;
+    background: linear-gradient(to right, green, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 2px solid green;
+    border-radius: 4px;
+    
+    width: 18%;
+    padding-left: 30px;
+
+}
+
+.p15{
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 33rem;
+    padding-bottom: 10px;
+}
+
+.nav{
+    
+    padding-left:35rem
+   
+  
+}
+.fa-code{
+    margin-bottom: 1rem;
+}
+.fa-node-js{
+    margin-bottom: 1rem;
+}
+.fa-paintbrush{
+    margin-bottom: 1rem;
+}
+
+
+
+
+@media(max-width:430px){
+
+    .body{
+        overflow-x: hidden;
+    }
+
+    .h1{
+        position: absolute;
+        top: 40px;
+        width: 100%; 
+        right: 0;
+        background: black;
+        transform: 0.5s ease;
+        display: none;
+        text-align: center;
+        flex-direction: column;
+        border-radius: 12px;
+        border-bottom: 1px solid green;
+        z-index: 10000;
+    }
+    
+    .h1.active{
+        left: 0;
+        display:flex ;
+    }
+
+    .first ol{
+        flex-direction: column;
+     
+    }
+
+    .first ol li{
+        text-align: center;
+        
+        font-size: larger;
+    }
+    logo{
+        font-size: 12px;
+    }
+
+    .hamburger{
+        display: flex;
+     }  
+
+    .hamburger.active span:nth-child(1){
+        transform: rotate(45deg)translate(6px, 6px);
+     }
+    .hamburger.active span:nth-child(2){
+        opacity:0;
+    }
+    .hamburger.active span:nth-child(3){
+        transform: rotate(-45deg)translate(6px ,-6px) ;
+    }
+
+    .tag-box{
+        
+        text-align: center;
+        align-items: center;
+        
+
+        position: relative;
+        margin: 6rem auto 1rem auto;
+        
+    }
+
+    .tag-box .p1{
+        margin-left: 0;
+    }
+    .full{
+        
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 12rem;
+        text-align: center;
+        
+        
+}
+    .image{
+        position: relative;
+        
+        width: 200px;
+        height: 300px;
+         margin: 2rem auto;
+        display: block;
+
+    }
+    .p2{
+        
+        margin: 1rem auto;
+        padding: 0 1rem;
+        margin-top: 7rem;
+    }
+    
+    /* ===== PROJECT SECTION RESPONSIVE (430px) ===== */
+
+.box{
+    height: auto;
+    padding: 6rem 1rem;
+}
+
+.box h2{
+    margin:4rem;
+    text-align: center;
+    font-size: 38px;
+    margin-top: 6rem;
+}
+
+.section1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card{
+    position: relative;
+    width: 75%;
+    height: auto;
+    margin: 0.5rem auto;
+}
+
+.box h3{
+    position: relative;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 25px;
+}
+
+.p3{
+    position: relative;
+    margin: 1rem 0;
+    text-align: center;
+    padding: 0 1rem;
+    font-size: 14px;
+}
+
+.box button{
+    position: relative;
+    margin: 1rem auto;
+    display: block;
+    font-size: 15px;
+}
+
+.section2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card2{
+    position: relative;
+    width: 75%;
+    height: auto;
+    margin: 1rem auto;
+    margin-top: 5rem;
+}
+
+.box h4{
+    position: relative;
+    margin: 1rem 0;
+    align-items: center;
+    font-size: 25px;
+}
+
+.p4{
+    position: relative;
+    text-align: center;
+    margin: 1rem 0;
+    padding:0 1rem;
+    font-size: 14px;
+}
+
+.on button{
+    position: relative;
+    display: block;
+    margin:1rem auto ;
+    font-size: 15px;
+}
+
+/* ===== BOX2 (Grade + ATM) ===== */
+
+.box2{
+    height: auto;
+    padding: 0.1rem 1rem;
+    
+}
+
+.section3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.section4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card3{
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin: 0.1rem auto;
+
+}
+.card4{
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin: 1rem auto;
+    margin-top: 5rem;
+}
+
+.box2 h5{
+    position: relative;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 22px;
+}
+.box2 h6{
+    position: relative;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 22px;
+}
+
+.p5{
+    
+    position: relative;
+    margin: 1rem 0;
+    padding: 0 1rem;
+    text-align: center;
+    font-size: 14px;
+}
+.p6{
+    position: relative;
+    margin: 1rem 0;
+    padding: 0 1rem;
+    text-align: center;
+    font-size: 14px;
+}
+
+.onn button{
+    position: relative;
+    display: block;
+    margin: 1rem auto;
+    font-size: 15px;
+}
+.but button{
+    position: relative;
+    display: block;
+    margin: 1rem auto;
+    font-size: 15px;
+    
+}
+
+
+/* ===== SKILLS SECTION ===== */
+
+.box3{
+    height: auto;
+    /* padding: 3rem 1rem; */
+    text-align: center;
+}
+
+.box3 h2{
+    position: relative;
+    margin: 2rem 0;
+    font-size: 30px;
+}
+
+.co{
+    position: relative;
+    margin: 1rem 0;
+    font-size: 22px;
+}
+
+.p7{
+    position: relative;
+    margin: 1rem 0;
+}
+.p8{
+    position: relative;
+    margin: 1rem 0;
+}
+
+.st1,
+.st2,
+.st3{
+    position: relative;
+    width: 80%;
+    margin: 3rem auto;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.st1:active,
+.st2:active,
+.st3:active{
+    transform: translateY(-15px);
+}
+
+
+/* ===== CONTACT SECTION ===== */
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box4{
+    height: auto;
+    padding: 2rem 1rem;
+    text-align: center;
+    
+}
+.p12{
+    position: relative;
+    /* margin-bottom: 1.5rem; */
+    text-align: center;
+    margin:2px;
+}
+
+.p13{
+    position: relative;
+    margin: 1rem 0;
+    font-size: 32px;
+}
+ 
+.pro{
+    position: relative;
+    width: 80%;
+    margin: 2rem auto;
+    height: 55vh;
+    /* padding: 1.5rem; */
+}
+
+.box4 input{
+    width: 85%;
+    margin: -1rem auto;
+    position: relative;
+    display: block;
+    margin-top: rem;
+}
+.pro button{
+    width: 85%;
+    margin: 2rem auto;
+    position: relative;
+    display: block;
+ } 
+
+.box4 label{
+    position: relative;
+    display: block;
+    margin: 0.1rem 0 0.3rem 1.5rem;
+    text-align: left;
+}
+
+
+iframe{
+    position: relative;
+    width: 75%;
+    height: 250px;
+    margin: 1rem auto;
+    display: block;
+}
+
+.p14{
+    position: relative;
+    width: 70%;
+    margin: 0.5rem auto;
+    margin-top: 6rem;
+    padding: 3px;
+}
+
+/* ===== SOCIAL ICONS RESPONSIVE ===== */
+
+ .nav{
+    padding-left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    flex-wrap: wrap;
+    
+}
+
+.email,
+.what,
+.insta{
+    font-size: 28px;
+    margin-top:3rem;
+    /* padding: 0; */
+}
+
+.p15{
+    position: relative;
+    margin: 1rem auto;
+    width: 100%;
+    text-align: center;
+    /* padding: 0 20px;   */
+    font-size: 12px;
+}
+
+}
