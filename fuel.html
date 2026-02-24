@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Cost Calculator </title>
+    <style>
+    body{font-family:Arial,  sans-serif; background:rgb(38, 54, 0); padding:20px}
+    .container{max-width:500px ; margin: auto; background:rgba(0, 0, 0, 0.151); padding: 20px;
+     border-radius: 12px; box-shadow: 0 0 10px white ; height: 60vh; margin-top: 3rem;}
+     h2{align-items: center; color: beige;}
+     input,select{width: 95%; padding: 10px; margin: 10px 0; border-radius: 8px; border:1px solid white}
+     button{width: 100%; padding: 12px; background-color: beige; border-radius: 8px; color: black;
+     font-size: 16px; cursor: pointer; font-weight: bold;} 
+     button:hover{background: black; color: beige;}
+     .result{background:white; padding: 15px; margin-top: 15px; border-radius: 6px; font-weight: bold;
+     color: black;} 
+     .label{font-weight: bold; font-size: larger; color: white;}  
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Fuel Cost Calculator </h2>
+        
+        <label>Fuel Type:</label>
+        <select id="fueltype">
+            <option value="petrol">Petrol</option>
+            <option value="diesel">Diesel</option>
+        </select>
+
+        <label>Total Amount($)</label>
+        <input type="number" id="amount" placeholder="Enter amount $">
+
+        <button onclick= "cal()" >Calculate</button>
+
+        <div class="result" id="result"></div>
+
+
+    </div>
+
+
+
+<script>
+    function cal(){
+        let petrol=100;
+        let diesel=95;
+        let type= document.getElementById("fueltype").value;
+        let amount= Number(document.getElementById("amount").value);
+
+        if(!amount){
+            document.getElementById("result").innerHTML="please enter valid amount!";
+            return;
+        }
+
+        let priceperlitre = type === "petrol" ? petrol : diesel;
+        let litres= amount/priceperlitre;
+
+        let discount = amount>2000 ? amount * 0.05 : 0;
+        let finalamount=amount-discount;
+
+        document.getElementById("result").innerHTML=`
+        FuelType : <b>${type.toUpperCase()}</b><br>
+        Litres You Get: <b>${litres.toFixed(2)}L</b><br>
+        Discount: <b>${discount.toFixed(2)}</b><br>
+        Final Amount After Discount: <b>${finalamount.toFixed(2)}</b>
+                `}
+    </script>
+</body>
+</html>
